@@ -171,5 +171,9 @@ cap.release()
 cv2.destroyAllWindows()
 
 """
+Detect Eye Pupil Better:
 https://towardsdatascience.com/real-time-eye-tracking-using-opencv-and-dlib-b504ca724ac6
+
+Face Landmark:
+https://www.kaggle.com/datasets/sergiovirahonda/shape-predictor-68-face-landmarksdat
 """
