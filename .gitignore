@@ -1,0 +1,4 @@
+/.DS_Store
+/.vscode
+/env
+/shape_predictor_68_face_landmarks.dat
