@@ -165,6 +165,16 @@ while cv2.waitKey(1) != ord("q"):
                 status = "Middle"
 
     print(status)
+    frame = cv2.putText(
+        frame,
+        status,
+        (5, 90),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        3,
+        (0, 0, 255),
+        2,
+        cv2.LINE_AA,
+    )
     cv2.imshow("Frame", frame)
 
 cap.release()
