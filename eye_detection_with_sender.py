@@ -1,12 +1,12 @@
 import cv2
 import dlib
 import socket
+import time
 
-HOST = "192.168.141.149"  # Standard loopback interface address (localhost)
-PORT = 50001  # Port to listen on (non-privileged ports are > 1023)
+HOST = "192.168.4.1"  # Standard loopback interface address (localhost)
+PORT = 50000  # Port to listen on (non-privileged ports are > 1023)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 sock.connect((HOST, PORT))
 
 cap = cv2.VideoCapture(0)
@@ -172,8 +172,19 @@ while cv2.waitKey(1) != ord("q"):
             else:
                 status = "Middle"
 
+    sock.send(status[0].encode())
+
     print(status)
-    sock.send(status.encode())
+    frame = cv2.putText(
+        frame,
+        status,
+        (5, 90),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        3,
+        (0, 0, 255),
+        2,
+        cv2.LINE_AA,
+    )
     cv2.imshow("Frame", frame)
 
 sock.close()
