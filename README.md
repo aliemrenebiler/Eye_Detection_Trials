@@ -1,4 +1,4 @@
-# Vehicle Movement with Eye Detection
+# Vehicle Control with Eye Detection
 
 This project is for the people who has spinal cord paralysis. These peope use wheelchairs and cannot control the chair without any help. The aim is to able the person control the chair with eye movements.
 
